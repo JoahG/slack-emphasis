@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.text());
 
 app.get('/', (req, res) => {
   res.send('Everything is 200 OK');
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.post('/slack', (req, res) => {
 	// fire and forget
-	console.log(req.body);
+	console.log(req);
 
 	request({
 		uri: req.body.response_url,
