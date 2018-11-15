@@ -1,0 +1,12 @@
+{
+  "name": "slack-emphasis",
+  "description": "emphasis bot",
+  "repository": "https://github.com/JoahG/slack-emphasis",
+  "keywords": ["slack", "node", "javascript", "slackbot"],
+  "env": {
+
+  },
+  "addons": [
+
+  ]
+}
