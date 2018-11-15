@@ -19,7 +19,7 @@ app.post('/slack', (req, res) => {
 		method: 'POST',
 		json: {
 			response_type: 'in_channel',
-			text: req.body.user_name + ': ' + req.body.text.split(' ').filter(w => w).join(' :clap: ')
+			text: 'Definitely not ' + req.body.user_name + ': ' + req.body.text.split(' ').filter(w => w).join(' :clap: ')
 		}
 	})
 
