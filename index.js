@@ -2,6 +2,8 @@ const request = require('request')
 
 exports.index = (req, res) => {
 	// fire and forget
+	console.log(req.body);
+
 	request({
 		uri: req.body.response_url,
 		method: 'POST',
