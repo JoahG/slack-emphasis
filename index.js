@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   res.send('Everything is 200 OK');
 });
 
-app.get('/slack', (req, res) => {
+app.post('/slack', (req, res) => {
 	// fire and forget
 	console.log(req.body);
 
