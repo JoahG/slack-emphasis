@@ -1,6 +1,13 @@
 const request = require('request')
+const express = require('express');
 
-exports.index = (req, res) => {
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Everything is 200 OK');
+});
+
+app.get('/slack', (req, res) => {
 	// fire and forget
 	console.log(req.body);
 
@@ -17,4 +24,6 @@ exports.index = (req, res) => {
 		text: 'I got you fam',
 		delete_original: true
 	})
-}
+});
+
+app.listen(process.env.PORT || 8080);
