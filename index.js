@@ -13,14 +13,13 @@ app.get('/', (req, res) => {
 
 app.post('/slack', (req, res) => {
 	// fire and forget
-	console.log(req);
 
 	request({
 		uri: req.body.response_url,
 		method: 'POST',
 		json: {
 			response_type: 'in_channel',
-			text: req.body.text.split(' ').filter(w => w).join(' :clap: ')
+			text: req.body.user_name + ': ' + req.body.text.split(' ').filter(w => w).join(' :clap: ')
 		}
 	})
 
